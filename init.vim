@@ -1,0 +1,15 @@
+" Habilita a exibição de números de linha
+set number
+
+" (Opcional) Habilita números de linha relativos
+set relativenumber
+
+" Habilita o uso do clipboard do sistema
+set clipboard=unnamedplus
+
+" Configura o tamanho de indentação
+set tabstop=2         " Número de espaços que um <Tab> representa
+set shiftwidth=2      " Número de espaços para cada nível de indentação
+set expandtab          " Usa espaços em vez de tabulações
+
+lua require('plugins')
