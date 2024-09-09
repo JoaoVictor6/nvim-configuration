@@ -12,6 +12,7 @@ set tabstop=2         " Número de espaços que um <Tab> representa
 set shiftwidth=2      " Número de espaços para cada nível de indentação
 set expandtab          " Usa espaços em vez de tabulações
 
-lua require('plugins')
+lua require('config.lazy')
+lua require("config.plugins")
 lua require('keymaps')
 lua require('tree')
