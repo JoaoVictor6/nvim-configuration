@@ -8,6 +8,13 @@ local cmp = require('cmp')
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {name = 'buffer'}
+  },
+  completion = {
+    autocomplete = {
+      require('cmp.types').cmp.TriggerEvent.InsertEnter,
+      require('cmp.types').cmp.TriggerEvent.TextChanged
+    }
   },
   snippet = {
     expand = function(args)
@@ -15,5 +22,13 @@ cmp.setup({
       vim.snippet.expand(args.body)
     end,
   },
-  mapping = cmp.mapping.preset.insert({}),
+  mapping = {
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Insert,
+      select = true
+    }),
+    ['<S-j>'] = cmp.mapping.scroll_docs(4),
+    ['<S-k>'] = cmp.mapping.scroll_docs(-4),
+  },
 })
