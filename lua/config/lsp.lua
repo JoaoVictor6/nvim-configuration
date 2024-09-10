@@ -22,3 +22,36 @@ lsp_zero.extend_lspconfig({
   lsp_attach = lsp_attach,
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
+
+
+---
+-- Config format on save
+---
+lsp_zero.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['ts_ls'] = {'javascript', 'typescript'},
+    ['rust_analyzer'] = {'rust'},
+  }
+})
+
+---
+-- Autocompletion setup
+---
+local cmp = require('cmp')
+
+cmp.setup({
+  sources = {
+    {name = 'nvim_lsp'},
+  },
+  snippet = {
+    expand = function(args)
+      -- You need Neovim v0.10 to use vim.snippet
+      vim.snippet.expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({}),
+})
