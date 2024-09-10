@@ -29,7 +29,11 @@ require("lazy").setup({
     { "nvim-tree/nvim-web-devicons" },
     { "lewis6991/gitsigns.nvim" },
     { "romgrk/barbar.nvim" },
-    { "nvim-tree/nvim-tree.lua" }
+    { "nvim-tree/nvim-tree.lua" },
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
