@@ -2,6 +2,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').ts_ls.setup({})
+
 require('lspconfig').emmet_language_server.setup({
   filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
   -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
