@@ -15,6 +15,7 @@ set expandtab          " Usa espaços em vez de tabulações
 lua require('config.lazy')
 lua require('config.lsp')
 lua require('config.lsp-servers')
+lua require('config.gitsigns')
 lua require('keymaps')
 lua require('tree')
 lua require('statusline.main')

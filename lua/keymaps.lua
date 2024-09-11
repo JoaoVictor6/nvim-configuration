@@ -8,3 +8,7 @@ map('n', '<leader>bb', '<Cmd>BufferPrevious<CR>', opts)
 
 -- nvim tree!
 map('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>', opts)
+
+-- git blame
+map('n', '<leader>gl', '<Cmd>Gitsigns blame_line<CR>', opts)
+
