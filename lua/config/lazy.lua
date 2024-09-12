@@ -39,7 +39,8 @@ require("lazy").setup({
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
     },
-    { "lewis6991/gitsigns.nvim" }
+    { "lewis6991/gitsigns.nvim" },
+    { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

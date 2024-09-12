@@ -12,3 +12,9 @@ map('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>', opts)
 -- git blame
 map('n', '<leader>gl', '<Cmd>Gitsigns blame_line<CR>', opts)
 
+--- FOLDS
+--- É basicamente aquele comportamento de minimizar escopos de codigo
+--- atalhos padrão
+--- zR open all folds
+--- zM close all open folds
+--- za toggles the fold at the cursor
