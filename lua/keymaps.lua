@@ -18,3 +18,9 @@ map('n', '<leader>gl', '<Cmd>Gitsigns blame_line<CR>', opts)
 --- zR open all folds
 --- zM close all open folds
 --- za toggles the fold at the cursor
+
+
+--- Telescope
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+vim.keymap.set('n', '<leader>fb', telescope.buffers, {})

@@ -40,6 +40,10 @@ require("lazy").setup({
       "neovim/nvim-lspconfig",
     },
     { "lewis6991/gitsigns.nvim" },
+    {
+      'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
     { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
   },
   -- Configure any other settings here. See the documentation for more details.
