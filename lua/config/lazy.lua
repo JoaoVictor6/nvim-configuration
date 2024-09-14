@@ -45,7 +45,13 @@ require("lazy").setup({
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
     { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
-    { 'windwp/nvim-ts-autotag' }
+    { 'windwp/nvim-ts-autotag' },
+    {
+      "ray-x/lsp_signature.nvim",
+      event = "VeryLazy",
+      opts = {},
+      config = function(_, opts) require'lsp_signature'.setup(opts) end
+    }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
