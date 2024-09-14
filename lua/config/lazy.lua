@@ -44,7 +44,8 @@ require("lazy").setup({
       'nvim-telescope/telescope.nvim', tag = '0.1.8',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+    { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
+    { 'windwp/nvim-ts-autotag' }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
