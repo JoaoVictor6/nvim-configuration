@@ -4,6 +4,7 @@ local opts = { noremap = true, silent = true }
 -- barbar config! https://github.com/romgrk/barbar.nvim
 map('n', '<leader>bn', '<Cmd>BufferNext<CR>', opts)
 map('n', '<leader>bb', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<leader>bx', '<Cmd>BufferClose<CR>', opts)
 
 
 -- nvim tree!
