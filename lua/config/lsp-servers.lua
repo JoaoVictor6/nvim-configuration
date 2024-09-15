@@ -3,6 +3,57 @@ require("mason-lspconfig").setup()
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').ts_ls.setup({})
 
+require('lspconfig').jsonls.setup({
+  filetypes = {"json", "jsonc"},
+    settings = {
+      json = {
+        -- Schemas https://www.schemastore.org
+        schemas = {
+          {
+            fileMatch = {"package.json"},
+            url = "https://json.schemastore.org/package.json"
+          },
+          {
+            fileMatch = {"tsconfig*.json"},
+            url = "https://json.schemastore.org/tsconfig.json"
+          },
+          {
+            fileMatch = {
+              ".prettierrc",
+              ".prettierrc.json",
+              "prettier.config.json"
+            },
+            url = "https://json.schemastore.org/prettierrc.json"
+          },
+          {
+            fileMatch = {".eslintrc", ".eslintrc.json"},
+            url = "https://json.schemastore.org/eslintrc.json"
+          },
+          {
+            fileMatch = {".babelrc", ".babelrc.json", "babel.config.json"},
+            url = "https://json.schemastore.org/babelrc.json"
+          },
+          {
+            fileMatch = {"lerna.json"},
+            url = "https://json.schemastore.org/lerna.json"
+          },
+          {
+            fileMatch = {"now.json", "vercel.json"},
+            url = "https://json.schemastore.org/now.json"
+          },
+          {
+            fileMatch = {
+              ".stylelintrc",
+              ".stylelintrc.json",
+              "stylelint.config.json"
+            },
+            url = "http://json.schemastore.org/stylelintrc.json"
+          }
+        }
+      }
+    }
+})
+
 require('lspconfig').emmet_language_server.setup({
   filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
   -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
