@@ -9,4 +9,4 @@ vim.opt.foldlevelstart = 1
 
 vim.opt.foldnestmax = 4
 vim.opt.foldenable = true
-vim.opt.foldmethod = "manual"
+vim.opt.foldmethod = "syntax"
