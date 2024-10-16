@@ -23,4 +23,5 @@ lua require('config.fold')
 lua require('config.autotag-config')
 lua require('config.colorscheme')
 lua require('config.telescope')
+lua require('config.tree')
 
