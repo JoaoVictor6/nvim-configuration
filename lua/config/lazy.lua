@@ -51,7 +51,15 @@ require("lazy").setup({
       event = "VeryLazy",
       opts = {},
       config = function(_, opts) require'lsp_signature'.setup(opts) end
-    }
+    },
+    { "whatyouhide/vim-gotham" },
+    {
+      "smjonas/inc-rename.nvim",
+      config = function()
+        require("inc_rename").setup()
+      end,
+    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

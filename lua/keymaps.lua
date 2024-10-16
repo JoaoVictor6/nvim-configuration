@@ -25,3 +25,7 @@ map('n', '<leader>gl', '<Cmd>Gitsigns blame_line<CR>', opts)
 local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
 vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
+
+
+--- Rename
+vim.keymap.set("n", "<leader>rn", ":IncRename ")

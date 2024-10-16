@@ -5,6 +5,7 @@ local lsp_zero = require('lsp-zero')
 local lsp_attach = function(client, bufnr)
   local opts = {buffer = bufnr}
 
+  vim.keymap.set('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
   vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
   vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
@@ -54,4 +55,12 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({}),
+})
+
+
+-- ESLINT FIX ON SAVE
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
+  command = 'silent! EslintFixAll',
+  group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
 })
