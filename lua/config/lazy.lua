@@ -60,6 +60,19 @@ require("lazy").setup({
       end,
     },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { 'Mofiqul/dracula.nvim' },
+    {
+      'rmagatti/auto-session',
+      lazy = false,
+
+      ---enables autocomplete for opts
+      ---@module "auto-session"
+      ---@type AutoSession.Config
+      opts = {
+        suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+        -- log_level = 'debug',
+      }
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

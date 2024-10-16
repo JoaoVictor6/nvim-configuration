@@ -5,4 +5,6 @@
 --   vim.cmd 'colorscheme gotham356' 
 -- end
 
-vim.cmd 'colorscheme catppuccin-latte'
+-- vim.cmd 'colorscheme catppuccin-latte'
+
+vim.cmd 'colorscheme dracula'
