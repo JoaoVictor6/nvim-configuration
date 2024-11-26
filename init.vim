@@ -21,7 +21,11 @@ lua require('tree')
 lua require('statusline.main')
 lua require('config.fold')
 lua require('config.autotag-config')
+<<<<<<< Updated upstream
 lua require('config.colorscheme')
 lua require('config.telescope')
 lua require('config.tree')
 
+=======
+lua require('config.nvim-tree')
+>>>>>>> Stashed changes

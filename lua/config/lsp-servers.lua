@@ -3,7 +3,8 @@ require("mason-lspconfig").setup()
 require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').ts_ls.setup({})
-require("lspconfig").eslint.setup({})
+require('lspconfig').tailwindcss.setup({})
+require('lspconfig').eslint.setup({})
 require('lspconfig').jsonls.setup({
   filetypes = {"json", "jsonc"},
     settings = {
