@@ -1,4 +1,5 @@
 {
+  "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
   "auto-session": { "branch": "main", "commit": "8d2eddb14ef66ed1019c92251e2d31bb7a2a2f87" },
   "barbar.nvim": { "branch": "master", "commit": "508864eb63178187faa06c59b283fd0a266d2844" },
   "catppuccin": { "branch": "main", "commit": "faf15ab0201b564b6368ffa47b56feefc92ce3f4" },
