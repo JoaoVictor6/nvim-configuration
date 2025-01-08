@@ -35,7 +35,6 @@ lsp_zero.format_on_save({
   },
   servers = {
     ['ts_ls'] = {'javascript', 'typescript'},
-    ['rust_analyzer'] = {'rust'},
   }
 })
 
