@@ -94,8 +94,14 @@ local function lsp()
   return errors .. warnings .. hints .. info .. "%#Normal#"
 end
 
+local devicons = require('nvim-web-devicons')
 local function filetype()
-  return string.format(" %s ", vim.bo.filetype):upper()
+  if pcall(function ()
+    devicons.get_icon(filename(), vim.fn.expand("%:e")) 
+  end) then 
+    return string.format(devicons.get_icon(filename(),  vim.fn.expand("%:e")))
+  end
+  return vim.bo.filetype
 end
 
 local function lineinfo()
