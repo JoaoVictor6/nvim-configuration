@@ -44,7 +44,11 @@ local function update_mode_colors()
 end
 
 local function filepath()
-  local fpath = vim.fn.fnamemodify(vim.fn.expand "%", ":~:.:h")
+  local success, fpath = pcall(vim.fn.fnamemodify, vim.fn.expand "%", ":~:.:h") 
+  -- local fpath = vim.fn.fnamemodify(vim.fn.expand "%", ":~:.:h")
+  if not success then
+    return " "
+  end
   if fpath == "" or fpath == "." then
       return " "
   end
@@ -53,8 +57,8 @@ local function filepath()
 end
 
 local function filename()
-  local fname = vim.fn.expand "%:t"
-  if fname == "" then
+  local success, fname = pcall(vim.fn.expand, "%:t")
+  if fname == "" or not success then
       return ""
   end
   return fname .. " "
@@ -96,12 +100,18 @@ end
 
 local devicons = require('nvim-web-devicons')
 local function filetype()
-  if pcall(function ()
-    devicons.get_icon(filename(), vim.fn.expand("%:e")) 
-  end) then 
-    return string.format(devicons.get_icon(filename(),  vim.fn.expand("%:e")))
+  local current_filename = filename()
+  if not current_filename then 
+    return ""
   end
-  return vim.bo.filetype
+  local success, icon = pcall(devicons.get_icon, current_filename, vim.fn.expand("%:e"))
+  if not success then 
+    return ""
+  end
+  if not icon then
+    return ""
+  end
+  return string.format(icon)
 end
 
 local function lineinfo()
