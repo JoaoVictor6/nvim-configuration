@@ -5,7 +5,7 @@ set number
 set relativenumber
 
 " Habilita o uso do clipboard do sistema
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 " Configura o tamanho de indentação
 set tabstop=2         " Número de espaços que um <Tab> representa
