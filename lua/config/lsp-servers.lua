@@ -1,5 +1,4 @@
 require("mason").setup()
-require("mason-lspconfig").setup()
 require('lspconfig').ast_grep.setup({})
 require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
