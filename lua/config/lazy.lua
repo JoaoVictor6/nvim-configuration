@@ -131,7 +131,8 @@ require("lazy").setup({
       ---@module "ibl"
       ---@type ibl.config
       opts = {},
-    }
+    },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
