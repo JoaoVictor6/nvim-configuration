@@ -1,4 +1,16 @@
 require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { 
+    "lua_ls", 
+    "emmet-language-server", 
+    "eslint-lsp", 
+    "haskell-language-server", 
+    "json-lsp", 
+    "tailwindcss-language-server", 
+    "typescript-language-server"
+  },
+  automatic_installation = true,
+})
 require('lspconfig').ast_grep.setup({})
 require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
