@@ -26,7 +26,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
-    { "nvim-treesitter/nvim-treesitter" },
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "nvim-tree/nvim-web-devicons" },
     { "lewis6991/gitsigns.nvim" },
     { "romgrk/barbar.nvim" },
