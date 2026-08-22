@@ -1,3 +1,13 @@
+-- Silencia os avisos de deprecação do lspconfig no Nvim 0.11 por enquanto
+-- para manter compatibilidade com o lsp-zero v4
+if vim.fn.has('nvim-0.11') == 1 then
+  local orig_deprecate = vim.deprecate
+  vim.deprecate = function(name, alternative, version, plugin, ...)
+    if plugin == 'nvim-lspconfig' and name:match('framework') then return end
+    return orig_deprecate(name, alternative, version, plugin, ...)
+  end
+end
+
 require("mason").setup()
 -- require("mason-lspconfig").setup({
 --   ensure_installed = { 
