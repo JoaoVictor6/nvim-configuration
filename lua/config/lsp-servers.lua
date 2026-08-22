@@ -17,8 +17,7 @@ require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').ts_ls.setup({})
 require('lspconfig').tailwindcss.setup({})
 require('lspconfig').eslint.setup({})
-require('lspconfig').vue_language_server
-.setup({})
+require('lspconfig').volar.setup({})
 require('lspconfig').jsonls.setup({
   filetypes = {"json", "jsonc"},
     settings = {
